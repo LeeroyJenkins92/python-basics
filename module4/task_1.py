@@ -1,1 +1,1 @@
-print ("oldest")
+print()
