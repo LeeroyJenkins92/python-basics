@@ -5,7 +5,7 @@ hours = 0
 total_tasks = 0
 print("начался 8часовой раб день")
 
-while hours < 2:
+while hours < 8:
     hours += 1
     print(hours, "час")
     tasks = int(input('Сколько задач решит Максим?: '))
