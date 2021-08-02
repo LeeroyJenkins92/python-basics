@@ -1,16 +1,28 @@
 print('Задача 10. Игра «Компьютер угадывает число»')
 print()
 
-num_wished = int(input('загадайте число между 1 и 100 (включительно): '))
-num_selected = 0
+n = (100 + 1) // 2
+count = 0
+
 
 while True :
-    n = int(input('Твое число равно, меньше или больше, чем число 50: '))
-    if n == 2:
-        num_wished = 51 // 2
-        num_selected = num_wished + num_selected
-        print(num_selected)
-        print(num_wished)
+    count += 1
+    print("Твое число равно, меньше или больше, чем число ", n, "?")
+    num = int(input('(1 - равно, 2 - больше, 3 - меньше): '))
+    if num == 1:
+        print("Я угадал!")
+        break
+    elif num == 2 :
+        n = (n + 100) // 2  #75
+               
+    elif num < 1 or num > 3 :
+        print ("Указано недопустимое значение :(") 
+        break
+    else:
+        n = (n + 1) // 2    #25
+
+print("Число попыток: ",count)      
+   
 
 
 # Поменяйте мальчика и компьютер из прошлой задачи местами.
