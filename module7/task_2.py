@@ -15,7 +15,6 @@ num_count = 0
 
 for num in range(1, 11) :
     num = int(input('Введите 10 чисел: '))
-    print(num)
     if num > 0 and num % 2 == 0 :
         num_count += 1
 print("Четных и положительных чисел: ", num_count)
