@@ -11,11 +11,10 @@ while hours < 8:
     tasks = int(input('Сколько задач решит Максим?: '))
     total_tasks += tasks
     call = int(input('Звонит жена. Взять трубку? (1-да, 0-нет) '))
-    if call != 1 or call != 0 :
+    if call > 1 or call < 0 :
         print("Введено некорректное значение элемента данных")
         break
     
-
 print("Рабочий день закончился. Всего выполнено задач:", total_tasks)
 if call == 1:
     print("Нужно зайти в магазин")
