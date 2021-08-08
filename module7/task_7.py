@@ -14,9 +14,10 @@ count = 0
 for num in range(a, b + 1) :
     if num % 3 == 0 :
         count += 1
-        summ = (summ + num) // count
+        summ += num
+mid_summ = summ / count
 
-print('Среднее арифметическое: ',  summ)
+print('Среднее арифметическое: ',  mid_summ)
     
 
 # по математической логике 5го класса :) среднее арифметическое есть сумма чисел поделить на их кол-во
