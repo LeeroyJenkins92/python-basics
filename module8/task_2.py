@@ -27,6 +27,6 @@ summ = 0
 for debtor in range(0, total_debtors + 1, 5):
     print("Должник с номером", debtor)
     howmuch = int(input('Сколько должны?: '))
-    summ += howmuch
+summ += howmuch
 print("Общая сумма долга:", summ)
 
