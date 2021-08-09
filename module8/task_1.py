@@ -20,4 +20,4 @@ for grecha in range(total_grecha - 4, -1, -4):
     print("Идет месяц номер: ", month)
     print("Гречи осталось: ", grecha)
     print()
-# Подумал что надо начинать 
+# Подумал что надо начинать c -4 кг сразу
