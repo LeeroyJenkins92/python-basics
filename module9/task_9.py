@@ -13,15 +13,14 @@ print()
 # Необходимо определить, сколько в итоге будет произведено молока за день.
 
 stables = input("Введите стойла: ")
-count_a = 0
 count = 0
 summ = 0
 
 for status in stables :
     count += 1
-    if status == "a" :
-        count_a = count * 2
-        summ += count_a
+    if status == "b" :
+        count_b = count * 2
+        summ += count_b
 
 print("В итоге молока за день: ", summ)
 

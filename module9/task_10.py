@@ -23,14 +23,4 @@ print()
 # Шифр:  | s | h | a | c | n | i | d | w |
 
 word = input("Введите зашифрованное сообщение: ")
-count = 0
-symbols = ""
-
-for letters in word :
-    count += 1
-    if count == 1:
-        a1 = letters
-    elif count == 2:
-        a2 = letters
-    elif count == 2:
-        a2 = letters
+print(word[:-1:2] + word[1::2][::-1])
