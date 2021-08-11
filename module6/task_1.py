@@ -13,7 +13,7 @@ print()
 while True:
     value = int(input('Введите число больше 1: '))
     formula = value ** 3
-    if formula > 1:
+    if formula:
         print(formula)
     else:
         print("Введенное Вами число не соответствует условию :(")

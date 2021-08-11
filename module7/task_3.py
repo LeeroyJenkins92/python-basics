@@ -12,6 +12,7 @@ total_salary = 0
 for salary in range(1, 13):
     salary = int(input('Введите зарплату за месяц: '))
     total_salary += salary          # находим сумму зпшек за год
-    mid_salary = total_salary / 12  # находим среднеарифметическое поделив сумму зпшек на их кол-во
+
+mid_salary = total_salary / 12  # находим среднеарифметическое поделив сумму зпшек на их кол-во
 
 print("Среднегодовая з/п равна: ",mid_salary)

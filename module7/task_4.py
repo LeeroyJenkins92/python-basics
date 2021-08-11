@@ -34,10 +34,10 @@ error = 0
 
 for sector in range(sector_first, sector_last + 1) :
     ppls = int(input('Введите кол-во людей в секторе: '))
-    if ppls < 0 :
-        error += 1
-        print("Указано некорректное значение элемента")
-        break                                              
+    while ppls < 0 :
+        ppls = int(input('Указано некорректное значение элемента, введите повторно: '))
+        print(sector)
+        error += 1                                                          
     print("Людей в", sector, "секторе :", ppls)
     if ppls > 10:
         alarm += 1

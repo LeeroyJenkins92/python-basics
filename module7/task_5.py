@@ -21,5 +21,5 @@ factorial = 1
 last = num
 
 for num in range(start, last + 1):
-        factorial *= num
-        print("Факториал числа ",num, "равен", factorial)
+    factorial *= num
+    print("Факториал числа ",num, "равен", factorial)
