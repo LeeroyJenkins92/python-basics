@@ -24,11 +24,13 @@ print()
 
 word = input("Введите зашифрованное сообщение: ")
 count = 0
+symbols = ""
 
 for letters in word :
     count += 1
-    total = count
-for num in range(1) :
-    print(letters)
-for num in range(total, total - 1, -1) :
-    print(letters)
+    if count == 1:
+        a1 = letters
+    elif count == 2:
+        a2 = letters
+    elif count == 2:
+        a2 = letters

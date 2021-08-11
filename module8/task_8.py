@@ -6,7 +6,7 @@ print()
 # S = 1 - 1/2 + 1/4 - 1/8 + … (-1)**N * 1/2**N 
 
 n = int(input('Введите значение N: '))
-summ = 0
+summ = 1
 
 for num in range(1, n + 1):
     summ += ((-1 ** n) * (1 / (2 ** n)))

@@ -10,19 +10,21 @@ print()
 
 educational_grant = int(input('Введите размер стипендии: '))
 expenses = int(input('Введите кол-во расходов: '))
-inflation = expenses * 3 / 100
-month = 0
+inflation = 0
+total_grant = 0
+
 
 for n in range(1, 10 + 1, 1):
+    total_grant += educational_grant
     if n > 1:
+        inflation = expenses * 3 / 100
         expenses += inflation
-    month += 1
-if expenses > educational_grant:
-        summ = expenses - educational_grant
-        print(expenses)
-        print("Уважаемые родители, дайте денег: ", summ)
+total_expenses = expenses * 10
+
+if total_expenses > total_grant:
+    diff = total_expenses - total_grant
+    print("Уважаемые родители, дайте денег: ", diff)
 else:
-        print("Денег хватает")
-
-
+    print("Денег хватает")
+        
 

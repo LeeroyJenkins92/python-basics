@@ -15,7 +15,7 @@ count = 0
 
 while total_letter > s_envelope:
         total_letter //= 2
-        count += 1
+        count += 2
 print("Кол-во раз чтобы сложить конверт пополам: ", count)
 
 

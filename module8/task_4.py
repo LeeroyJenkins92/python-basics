@@ -10,8 +10,11 @@ a = int(input('Введите значение А: '))
 b = int(input('Введите значение В: '))
 c = int(input('Введите значение C: '))
 summ = 0
+count = 0
 
 for numbers in range(a, b + 1):
     if numbers % c == 0:
         summ += numbers
-print("Сумма ",summ)
+        count += 1
+print("Среднее арифметическое: ",summ / count)
+
