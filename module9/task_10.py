@@ -24,3 +24,17 @@ print()
 
 word = input("Введите зашифрованное сообщение: ")
 print(word[:-1:2] + word[1::2][::-1])
+count = 0
+right_letters = ""
+left_letters = ""
+
+for letters in word :
+    count += 1
+    if count % 2 != 0 :
+        left_letters += letters
+        count = 0
+    else:
+        right_letters += letters
+        for letters in right_letters :
+            count += 1
+            if (100 / )
