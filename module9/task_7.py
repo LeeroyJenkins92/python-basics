@@ -20,7 +20,6 @@ summ = 0
 for letters in text :
     if letters != " " :
         count += 1
-        print(count)
         if count > summ:
             summ = count
     else:

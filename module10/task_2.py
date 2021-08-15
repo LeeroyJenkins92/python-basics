@@ -11,12 +11,10 @@ print()
 # 5 5 5 5 5
 
 n = int(input('Введите число: '))
-num = -1
+count = -1
 
-for row in range(0, n+1):
-    num += 1
-    for col in range(0, n+1):
-        while row > 0: 
-            print(num, "\t", end = '')
-            row -= 1
+for row in range(n+1, 0, -1):
+    count += 1
+    for col in range(n+1, row, -1):
+        print(count, end = '\t')
     print()
