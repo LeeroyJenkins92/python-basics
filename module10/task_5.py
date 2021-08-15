@@ -8,7 +8,8 @@ seqnum = int(input('Сколько будет чисел: '))
 count = 0
 
 for num in range(seqnum):
-    number = int(input('введите число: '))
+    print("Введите", num, "-e число ")
+    number = int(input())
     while number < 0:
         number = int(input('число не может быть отрицательным! введите число повторно: '))
     prime = True

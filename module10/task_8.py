@@ -15,5 +15,4 @@ print()
 
 n = int(input("Введите размер пирамиды: "))
 for row in range(1, n+1):
-    print(row)
     print(' '*((n+1)-row),'# '*(row))

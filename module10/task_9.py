@@ -11,13 +11,13 @@ print()
 #    13    15    17    19
 # 21    23    25    27    29
 
-height = int(input('Введите количество уровней пирамиды: '))
-numeral = 1
-for row in range(height):
-    print(row)
-    space = height - row - 1
-    print('   ' * space, end = '')
-    for col in range(row+1):
-        print(numeral, end = '    ')
-        numeral += 2
+rows = int(input('Введите количество уровней пирамиды: '))
+new_num = 1
+
+for line in range(rows):
+    space_count = rows - line - 1
+    print("   " * space_count, end = "")
+    for number in range(line + 1):
+        print(new_num, end = '    ')
+        new_num += 2
     print()
