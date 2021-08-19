@@ -5,7 +5,10 @@ print()
 
 # При решении этой задачи нельзя пользоваться условными операторами и циклами.
 
-hours = float(input("Введите часы: "))
-mins = float(input("Введите минуты: "))
+hour_angle = float(input("Введите угол: "))
 
-print(hours * 30 + mins * 30 / 60)
+min_angle = round(hour_angle % 30 * 12, 2)
+
+
+
+print("Минутная стрелка повернулась на: ", min_angle, "градусов")
