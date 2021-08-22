@@ -28,6 +28,8 @@ print()
 def coin_searcher():
     x = float(input('Введите икс: '))
     y = float(input('Введите угрек: '))
+    out(x, y)
+def out(x, y):
     if (-1 <= x <= 1) and (-1 <= y <= 1):
         print('Монетка где-то рядом')
     else:

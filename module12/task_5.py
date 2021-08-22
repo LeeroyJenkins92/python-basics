@@ -24,6 +24,9 @@ def count_letters():
     text = input("Введите текст: ")
     num = input("Какую цифру ищем? ")
     letter = input("Какую букву ищем? ")
+    out(text, num, letter)
+
+def out(text, num, letter):
     count_l = 0
     count_n = 0
     for nums in text:
@@ -34,4 +37,5 @@ def count_letters():
             count_l += 1
     print("Кол-во цифр %.1s: " % num,count_n)
     print("Кол-во букв %.1s: " % letter,count_l)
+
 count_letters()

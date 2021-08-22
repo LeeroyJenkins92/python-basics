@@ -9,12 +9,15 @@ print()
 # 
 # Я знаю, что сумма чисел от 1 до 5 равна 15
 
-num = int(input("Введите число: "))
-
 def summa_n():
-    summa_n = 0
+    num = int(input("Введите число: "))
+    out(num)
+    
+
+def out(num):
+    summ = 0
     for n in range(1, num + 1):
-        summa_n += n
-    print(summa_n)
-print("Я знаю, что сумма чисел от %.1d до %.1d равна:" % (1,num),end = " ")
+        summ += n
+    print("Я знаю, что сумма чисел от %.1d до %.1d равна:" % (1,num),end = " ")
+    print(summ)
 summa_n()
