@@ -11,10 +11,10 @@ print()
 # 
 # Конечно же, вы решили снова помочь бедняге.
 # Напишите для него такую программу.
-
-num1 = int(input("Введите первое число: "))
-num2 = int(input("Введите второе число: "))
-
-def smallest(num1, num2):
+def smallest():
+    num1 = int(input("Введите первое число: "))
+    num2 = int(input("Введите второе число: "))
+    out(num1, num2)
+def out(num1, num2):
     print("Наименьшее число: ",int(((num1 + num2) - abs(num1 - num2)) / 2))
-smallest(num1, num2)
+smallest()

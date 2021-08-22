@@ -20,11 +20,13 @@ print()
 # Количество цифр 0: 2
 # Количество букв л: 1
 
-text = input("Введите текст: ")
-num = input("Какую цифру ищем? ")
-letter = input("Какую букву ищем? ")
+def count_letters():
+    text = input("Введите текст: ")
+    num = input("Какую цифру ищем? ")
+    letter = input("Какую букву ищем? ")
+    out(text, num, letter)
 
-def count_letters(text, num, letter):
+def out(text, num, letter):
     count_l = 0
     count_n = 0
     for nums in text:
@@ -36,4 +38,4 @@ def count_letters(text, num, letter):
     print("Кол-во цифр %.1s: " % num,count_n)
     print("Кол-во букв %.1s: " % letter,count_l)
 
-count_letters(text, num, letter)
+count_letters()
