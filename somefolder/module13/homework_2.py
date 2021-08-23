@@ -8,15 +8,13 @@ print()
 
 import math
 
-def main():
-    num1 = int(input("Введите 1ое число: "))
-    num2 = int(input("Введите 2ое число: "))
-    euclid(num1, num2)
+num1 = int(input("Введите 1ое число: "))
+num2 = int(input("Введите 2ое число: "))
 
-# def euclid(num1, num2):
-#     biggest = int(((num1 + num2) + abs(num1 - num2)) / 2)
-#     smallest = int(((num1 + num2) - abs(num1 - num2)) / 2)
-#     return math.gcd(biggest, smallest)
+def main(num1, num2):
+    biggest = int(((num1 + num2) + abs(num1 - num2)) / 2)
+    smallest = int(((num1 + num2) - abs(num1 - num2)) / 2)
+    return math.gcd(biggest, smallest)
 
-euclid(num1, num2)
-print(a)
+euclid = main(num1, num2)
+print(euclid)
