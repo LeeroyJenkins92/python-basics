@@ -17,3 +17,16 @@ print()
 
 # Введите x: 5
 # Сумма ряда =  0.2836250150891709
+
+def summ(precision, x):
+  previous = i = 0
+  current = fn = xn = 1
+  while abs(current - previous) > precision:
+    previous = current
+    xn *= x * x
+    i += 1
+    fn *= 2 * i * (2 * i - 1)
+    current += (-1 if i % 2 else 1) * xn / fn
+  return current
+
+print("Сумма ряда =", summ(float(input("Введите точность: ")), float(input("Введите X: "))))

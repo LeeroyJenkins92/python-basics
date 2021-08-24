@@ -30,21 +30,14 @@ def left(num, mantissa_left):
     while num > 10:
         num /= 10
         mantissa_left += 1
-    return num, mantissa_left
+    print("Формат плавающей точки:", round(num, 2), "* 10 **", mantissa_left)
 def right(num, mantissa_right):
     while num < 1:
         num *= 10
         mantissa_right -= 1
-    return num, mantissa_right
+    print("Формат плавающей точки:", round(num, 2), "* 10 **", mantissa_right)
 
 if num >= 1e0:
-    left(num, mantissa_left)
-    print("Формат плавающей точки:", round(num, 2), "* 10 **", mantissa_left)
+    left(num, mantissa_left)   
 else:
     right(num, mantissa_right)
-    print("Формат плавающей точки:", round(num, 2), "* 10 **", mantissa_right)
-# я не понимаю, как вернуть из функции несколько значений в основную программу.
-# Как их теперь вывести в принте в данном случае?
-
-
-

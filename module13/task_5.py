@@ -25,34 +25,47 @@ print()
 # чтобы в основной части программы был только ввод чисел, затем изменённые числа и вывод их суммы.
 
 first_n = int(input("Введите первое число: "))
-first_num_count = 0
-temp = first_n
+second_n = int(input("Введите второе число: "))
+count = 0
 
-while temp > 0:
-    first_num_count += 1
-    temp = temp // 10
-
-if first_num_count < 3:
-    print("В первом числе меньше трёх цифр.")
-else:
-    last_digit = first_n % 10
-    first_digit = first_n // 10 ** (first_num_count - 1)
-    between_digits = first_n % 10 ** (first_num_count - 1) // 10
-    first_n = last_digit * 10 ** (first_num_count - 1) + between_digits * 10 + first_digit
-    print('Изменённое первое число:', first_n)
-    second_n = int(input("\nВведите второе число: "))
-    second_num_count = 0
-    temp = second_n
-    
+def first_n_check(first_n, count):
+    temp = first_n
     while temp > 0:
-        second_num_count += 1
-        temp = temp // 10
-    if second_num_count < 4:
-        print("Во втором числе меньше четырёх цифр.")
+        count += 1
+        temp //= 10
+    if count < 3:
+        print("Указано некорректное значение элемента")
+        quit()
     else:
-        last_digit = second_n % 10
-        first_digit = second_n // 10 ** (second_num_count - 1)
-        betweenDigits = second_n % 10 ** (second_num_count - 1) // 10
-        second_n = last_digit * 10 ** (second_num_count - 1) + between_digits * 10 + first_digit
-        print('Изменённое второе число:', second_n)
-        print('\nСумма чисел:', first_n + second_n)
+        summ1(first_n, count)
+
+def second_n_check(second_n, count):
+    temp = second_n
+    while temp > 0:
+        count += 1
+        temp //= 10
+    if count < 4:
+        print("Указано некорректное значение элемента")
+        quit()
+    else:
+        summ2(second_n, count)
+
+def summ1(first_n, count):
+    last_digit = first_n % 10
+    first_digit = first_n // 10 ** (count - 1)
+    between_digits = first_n % 10 ** (count - 1) // 10
+    first_n = last_digit * 10 ** (count - 1) + between_digits * 10 + first_digit
+    print('\nИзменённое первое число:', first_n)
+    return first_n
+
+def summ2(second_n, count):   
+    last_digit = second_n % 10
+    first_digit = second_n // 10 ** (count - 1)
+    between_digits = second_n % 10 ** (count - 1) // 10
+    second_n = last_digit * 10 ** (count - 1) + between_digits * 10 + first_digit
+    print('Изменённое второе число:', second_n)
+    return second_n
+
+first_n_check(first_n, count)
+second_n_check(second_n, count)
+print('\nСумма чисел:', summ1(first_n, count) + summ2(second_n, count))
