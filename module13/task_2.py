@@ -17,6 +17,6 @@ print()
 
 a, b, c = int(input("Введите значение А: ")), int(input("Введите значение В: ")), int(input("Введите значение С: "))
 def main(a, b, c):
-    return max(max(a, b), max(b, c))
+    return max(max(a, b), c)
 maxx = main(a, b, c)
 print(maxx)
