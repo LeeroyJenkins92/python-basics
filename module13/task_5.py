@@ -37,7 +37,13 @@ def first_n_check(first_n, count):
         print("Указано некорректное значение элемента")
         quit()
     else:
-        summ1(first_n, count)
+        print(first_n, count)
+        last_digit = first_n % 10
+        first_digit = first_n // 10 ** (count - 1)
+        between_digits = first_n % 10 ** (count - 1) // 10
+        first_n = last_digit * 10 ** (count - 1) + between_digits * 10 + first_digit
+        print('\nИзменённое первое число:', first_n)
+        return first_n
 
 def second_n_check(second_n, count):
     temp = second_n
@@ -48,24 +54,11 @@ def second_n_check(second_n, count):
         print("Указано некорректное значение элемента")
         quit()
     else:
-        summ2(second_n, count)
+        last_digit = second_n % 10
+        first_digit = second_n // 10 ** (count - 1)
+        between_digits = second_n % 10 ** (count - 1) // 10
+        second_n = last_digit * 10 ** (count - 1) + between_digits * 10 + first_digit
+        print('Изменённое второе число:', second_n)
+        return second_n
 
-def summ1(first_n, count):
-    last_digit = first_n % 10
-    first_digit = first_n // 10 ** (count - 1)
-    between_digits = first_n % 10 ** (count - 1) // 10
-    first_n = last_digit * 10 ** (count - 1) + between_digits * 10 + first_digit
-    print('\nИзменённое первое число:', first_n)
-    return first_n
-
-def summ2(second_n, count):   
-    last_digit = second_n % 10
-    first_digit = second_n // 10 ** (count - 1)
-    between_digits = second_n % 10 ** (count - 1) // 10
-    second_n = last_digit * 10 ** (count - 1) + between_digits * 10 + first_digit
-    print('Изменённое второе число:', second_n)
-    return second_n
-
-first_n_check(first_n, count)
-second_n_check(second_n, count)
-print('\nСумма чисел:', summ1(first_n, count) + summ2(second_n, count))
+print('\nСумма чисел:', first_n_check(first_n, count) + second_n_check(second_n, count))

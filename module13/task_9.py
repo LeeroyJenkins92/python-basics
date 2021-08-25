@@ -18,7 +18,7 @@ print()
 # 
 # K = i(1 + i) ** n / (1 + i) ** n - 1
 
-def A(i, n, summ): 
+def a(i, n, summ): 
     return i / 100 * (1 + i / 100) ** n / ((1 + i / 100) ** n - 1) * summ
 
 summ = float(input('Введите сумму кредита: '))
@@ -29,8 +29,8 @@ for j in range(1, 4):
     print('\nПериод:',j)
     print('Остаток долга на начало периода:', summ)
     print('Выплачено процентов:',summ * i / 100)
-    print('Выплачено тела кредита:', round(A(i, n, summ1), 2) - summ * i / 100)
-    summ -= round(A(i, n, summ1), 2) - summ * i / 100
+    print('Выплачено тела кредита:', round(a(i, n, summ1), 2) - summ * i / 100)
+    summ -= round(a(i, n, summ1), 2) - summ * i / 100
 print()
 print('Остаток долга:', summ)
 print('-------------------------')
@@ -43,8 +43,8 @@ for j in range (1, n2 + 1):
     print('\nПериод:', j)
     print('Остаток долга на начало периода:', summ)
     print('Выплачено процентов:', summ * i / 100)
-    print('Выплачено тела кредита:', round(A(i, n2, summ1), 2) - summ * i / 100)
-    summ -= round(A(i, n2, summ1), 2) - summ * i / 100
+    print('Выплачено тела кредита:', round(a(i, n2, summ1), 2) - summ * i / 100)
+    summ -= round(a(i, n2, summ1), 2) - summ * i / 100
 
 print()
 print('Остаток долга:', summ)
